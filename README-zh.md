@@ -8,7 +8,6 @@
 * [1.通用Table](#1)
 
 ## 思路
-## 一级标题
 类似easy-ui的table加载方式
 ## 环境简述
 
@@ -83,5 +82,5 @@ listQuery|分页参数，listQuery：{ page：当前页码，limit:每页条目�
 
 
   [1]: https://segmentfault.com/img/bVbtGMS?w=980&h=784
-  [2]: https://github.com/ghzzk001/tbs-ve-template/tree/master/static/github/table1.gif
+  [2]: https://raw.githubusercontent.com/ghzzk001/tbs-ve-template/master/static/github/table1.gif
   [3]: https://segmentfault.com/img/bVbtGS0?w=728&h=530
