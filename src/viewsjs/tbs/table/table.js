@@ -19,9 +19,9 @@ export const table = {
     listQuery: {
       page: 1,
       limit: 10,
-      importance: undefined,
-      title: undefined,
-      type: undefined,
+      // importance: undefined,
+      // title: undefined,
+      // type: undefined,
       sort: '+id'
     }
   },
