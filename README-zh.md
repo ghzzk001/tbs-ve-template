@@ -1,96 +1,87 @@
-# vue-admin-template
+# tbs-ve-template
+基于elementUI的结合日常开发功能扩展组件
 
-> 这是一个 极简的 vue admin 管理后台 它只包含了 Element UI & axios & iconfont & permission control & lint，这些搭建后台必要的东西。
+[项目地址：tbs-ve-template](https://github.com/ghzzk001/tbs-ve-template)
 
-[线上地址](http://panjiachen.github.io/vue-admin-template)
+## 前言
+结合日常开发，封装常用功能，提高开发效率。让程序猿兄弟姐妹们也有时间约约女票，逗逗男票，做做自己想做的事情，不要天天在办公室造轮子！
+* [1.通用Table](#1)
 
-[国内访问](https://panjiachen.gitee.io/vue-admin-template)
+## 思路
+## 一级标题
+类似easy-ui的table加载方式
+## 环境简述
 
-## Extra
+**开发框架:基于vue-admin-template** 
 
-如果你想要根据用户角色来动态生成侧边栏和 router，你可以使用该分支[permission-control](https://github.com/PanJiaChen/vue-admin-template/tree/permission-control)
+github:https://github.com/PanJiaChen/vue-admin-template
 
-本项目基于`webpack4`开发，若还想使用`webpack3`开发，请使用该分支[webpack3](https://github.com/PanJiaChen/vue-admin-template/tree/webpack3)
+**JS 包管理工具: Yarn** 
+ 
+安装方法：https://www.cnblogs.com/xiangsj/p/8083094.html
 
-如果你想使用基于 vue + typescript 的管理后台, 可以看看这个项目: [vue-typescript-admin-template](https://github.com/Armour/vue-typescript-admin-template) (鸣谢: [@Armour](https://github.com/Armour))
+**项目 启动:**
+**第一步：yarn install 下载所有依赖包** 
+**第二步：yarn run dev 下载所有依赖包** 
+**第三步：访问http://localhost:9528** 
 
-## 相关项目
+## 项目结构
+ **说明：为了避免代码过长不易浏览，讲vue代码与js代码分开编辑。** 
+![图片描述][1]
 
-[vue-element-admin](https://github.com/PanJiaChen/vue-element-admin)
+## <a name="1">1. 通用Table</a>
+#### **显示效果** 
+![图片描述][2]
 
-[electron-vue-admin](https://github.com/PanJiaChen/electron-vue-admin)
+#### **支持类型** 
+类型：`文本` | `链接` | `文档` | `图片`
 
-[vue-typescript-admin-template](https://github.com/Armour/vue-typescript-admin-template)
+#### **用法** 
+![图片描述][3]
 
-写了一个系列的教程配套文章，如何从零构建后一个完整的后台项目:
+**相关属性 ** 
+***Table 属性:*** 
 
-- [手摸手，带你用 vue 撸后台 系列一(基础篇)](https://juejin.im/post/59097cd7a22b9d0065fb61d2)
-- [手摸手，带你用 vue 撸后台 系列二(登录权限篇)](https://juejin.im/post/591aa14f570c35006961acac)
-- [手摸手，带你用 vue 撸后台 系列三 (实战篇)](https://juejin.im/post/593121aa0ce4630057f70d35)
-- [手摸手，带你用 vue 撸后台 系列四(vueAdmin 一个极简的后台基础模板,专门针对本项目的文章,算作是一篇文档)](https://juejin.im/post/595b4d776fb9a06bbe7dba56)
-- [手摸手，带你封装一个 vue component](https://segmentfault.com/a/1190000009090836)
+参数|说明|类型|可选值|默认值
+--|--|--|--|--
+listLoading|动画效果|boolean|—|true
+columns|table 的列（column）的配置对象，更多细节请参见列（column）属性。|array|—|—
+ui|table显示效果的配置对象，更多细节请参见列（ui）属性|array|—|—
+data|显示数据集合，一般从远程获取数据后进行赋值|array|—|—
+page|table分页配置对象，更多细节请参见列（page）属性|array|—|—
 
-## Build Setup
+***Table列（Column）属性:*** 
 
-```bash
-# Clone project
-git clone https://github.com/PanJiaChen/vue-admin-template.git
+参数|说明|类型|可选值|默认值
+--|--|--|--|--
+label|列的标题文本|string|—|—
+field|列的字段名,与data属性中的名称对应|string|—|—
+width|列的宽度|number|—|—
+showtype|列的类型，normal：为文本类型|string|normal、http、file、image|normal
+filter|过滤器，类似easyui中formatter属性，用于格式数据|string|—|—
 
-# Install dependencies
-npm install
+***Table样式（ui）属性:*** 
 
-# 建议不要用cnpm  安装有各种诡异的bug 可以通过如下操作解决npm速度慢的问题
-npm install --registry=https://registry.npm.taobao.org
+参数|说明|类型|可选值|默认值
+--|--|--|--|--
+tableHeight|Table高|string、number|—|—
+tableWidth|Table宽度|string、number|—|—
 
-# Serve with hot reload at localhost:9528
-npm run dev
+***Table分页（page）属性:*** 
 
-# Build for production with minification
-npm run build
+参数|说明|类型|可选值|默认值
+--|--|--|--|--
+total|总条目数|number|—|—
+listQuery|分页参数，listQuery：{ page：当前页码，limit:每页条目数 }|number|—|—
+ 
 
-# Build for production and view the bundle analyzer report
-npm run build --report
-```
+## 有问题反馈
+在使用中有任何问题，欢迎反馈给我，可以用以下联系方式跟我交流
 
-## Demo
+* QQ: 375766253
+* 邮件:375766253@qq.com
 
-![demo](https://github.com/PanJiaChen/PanJiaChen.github.io/blob/master/images/demo.gif)
 
-### Element-Ui 使用 cdn 教程
-
-首先找到 `index.html` ([根目录下](https://github.com/PanJiaChen/vue-admin-template/blob/element-ui-cdn/index.html))
-
-引入 Element 的 css 和 js ，并且引入 vue 。因为 Element-Ui 是依赖 vue 的，所以必须在它之前引入 vue 。
-
-之后找到 [webpack.base.conf.js](https://github.com/PanJiaChen/vue-admin-template/blob/element-ui-cdn/build/webpack.base.conf.js) 加入 `externals` 让 webpack 不打包 vue 和 element
-
-```
-externals: {
-  vue: 'Vue',
-  'element-ui':'ELEMENT'
-}
-```
-
-之后还有一个小细节是如果你用了全局对象方式引入 vue，就不需要 手动 `Vue.use(Vuex）` ，它会自动挂载，具体见 [issue](https://github.com/vuejs/vuex/issues/731)
-
-最终你可以使用 `npm run build --report` 查看效果
-如图：
-![demo](https://panjiachen.github.io/images/element-cdn.png)
-
-**[具体代码](https://github.com/PanJiaChen/vue-admin-template/commit/746aff560932704ae821f82f10b8b2a9681d5177)**
-
-**[对应分支](https://github.com/PanJiaChen/vue-admin-template/tree/element-ui-cdn)**
-
-## Browsers support
-
-Modern browsers and Internet Explorer 10+.
-
-| [<img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/edge/edge_48x48.png" alt="IE / Edge" width="24px" height="24px" />](http://godban.github.io/browsers-support-badges/)</br>IE / Edge | [<img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/firefox/firefox_48x48.png" alt="Firefox" width="24px" height="24px" />](http://godban.github.io/browsers-support-badges/)</br>Firefox | [<img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/chrome/chrome_48x48.png" alt="Chrome" width="24px" height="24px" />](http://godban.github.io/browsers-support-badges/)</br>Chrome | [<img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/safari/safari_48x48.png" alt="Safari" width="24px" height="24px" />](http://godban.github.io/browsers-support-badges/)</br>Safari |
-| --------- | --------- | --------- | --------- |
-| IE10, IE11, Edge| last 2 versions| last 2 versions| last 2 versions
-
-## License
-
-[MIT](https://github.com/PanJiaChen/vue-admin-template/blob/master/LICENSE) license.
-
-Copyright (c) 2017-present PanJiaChen
+  [1]: https://segmentfault.com/img/bVbtGMS?w=980&h=784
+  [2]: https://github.com/ghzzk001/tbs-ve-template/tree/master/static/github/table1.gif
+  [3]: https://segmentfault.com/img/bVbtGS0?w=728&h=530
